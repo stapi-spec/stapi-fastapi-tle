@@ -59,7 +59,10 @@ class EarthObservationSatelliteModel(EarthSatellite):
                         bbox=[lon, lat, alt, lon, lat, alt],
                     ),
                     properties={
-                        "datetime": [t.utc_datetime(), t.utc_datetime()],
+                        "datetime": [
+                            t.utc_datetime() - self._model.block_time[0], 
+                            t.utc_datetime() + self._model.block_time[1]
+                        ],
                         "start": t.utc_datetime() - self._model.block_time[0],
                         "end": t.utc_datetime() + self._model.block_time[1],
                         "view:off_nadir": off_nadir,
