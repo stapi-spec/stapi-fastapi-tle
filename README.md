@@ -2,6 +2,14 @@
 
 This is an example implementation for https://github.com/stapi-spec/stapi-fastapi generating opportunity previews based on a TLE.
 
+## Initial Setup
+
+You can install all the dependencies with poetry, like this:
+
+```bash
+poetry install
+```
+
 ## Configuration
 
 The mock backend uses SQLite/Spatialite as storage, therefore the
