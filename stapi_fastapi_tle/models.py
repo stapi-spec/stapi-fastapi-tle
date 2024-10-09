@@ -11,7 +11,7 @@ from pydantic import (
 )
 
 from stapi_fastapi.models.constraints import Constraints as BaseConstraints
-from stapi_fastapi.models.opportunity import OpportunityRequest
+from stapi_fastapi.models.opportunity import OpportunityRequest, OpportunityProperties
 
 
 class Satellite(BaseModel):
@@ -33,10 +33,7 @@ class Satellite(BaseModel):
         return self.tle.split("\n")
 
 
-class PassProperties(BaseModel):
-    datetime: AwareDatetime
-    start: AwareDatetime
-    end: AwareDatetime
+class PassProperties(OpportunityProperties):
     view_off_nadir: float = Field(..., alias="view:off_nadir")
     view_azimuth: float = Field(..., alias="view:azimuth")
     view_elevation: float = Field(..., alias="view:elevation")
