@@ -37,5 +37,5 @@ curl http://127.0.0.1:8000/products
 _POST to opportunities_
 
 ```
-curl -d '{"datetime":"2014-10-01T13:00:00Z/2014-10-10T15:30:00Z","product_id":"mock:standard","geometry":{"type":"Point","coordinates":[-115.06855238269905,31.987811301701587]},"properties":{"off_nadir":{"minimum":0,"maximum":40}},"filter":{}}' -X POST http://127.0.0.1:8000/opportunities
+curl -d '{"datetime":"2014-10-01T13:00:00Z/2014-10-10T15:30:00Z","product_id":"mock:standard","geometry":{"type":"Point","coordinates":[-115.06855238269905,31.987811301701587]},"properties":{"off_nadir":{"minimum":0,"maximum":35}},"filter":{}}'  -H 'Content-Type: application/json' -X POST http://127.0.0.1:8000/opportunities
 ```
