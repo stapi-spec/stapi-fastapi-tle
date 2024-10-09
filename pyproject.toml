@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "stapi-fastapi-tle"
+version = "0.1.0"
+description = "A STAPI example backend which generates opportunities from a TLE"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "~3.12"
+pydantic = "^2.9.2"
+stapi-fastapi = { git = "https://github.com/stapi-spec/stapi-fastapi" }
+geoalchemy2 = "^0.15.2"
+shapely = "^2.0.6"
+skyfield = "^1.49"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+uvicorn = "^0.29.0"
+pydantic-settings = "^2.2.1"
+httpx = "^0.27.0"
+pytest-coverage = "^0.0"
+pyrfc3339 = "^1.1"
+sqlalchemy = "^2.0.29"
+geoalchemy2 = "^0.15.2"
+shapely = "^2.0.3"
+pre-commit = "^4.0.1"
+
+[tool.poetry.scripts]
+tle = "stapi_fastapi_tle.__dev__:cli"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
