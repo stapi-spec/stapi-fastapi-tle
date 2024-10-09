@@ -92,8 +92,8 @@ class StapiMockBackend:
         except IndexError:
             alt = 0
         passes = self.satellite.passes(
-            start=validated.properties.datetime[0],
-            end=validated.properties.datetime[1],
+            start=validated.datetime[0],
+            end=validated.datetime[1],
             lon=validated.geometry.coordinates[0],
             lat=validated.geometry.coordinates[1],
             alt=alt,
